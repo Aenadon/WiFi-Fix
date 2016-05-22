@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">WiFi Repair</string>
+
+    <string name="disclaimerTitle">IMPORTANT NOTICE</string>
+    <string name="disclaimer">These methods have been tested several times and have proven to work without any side effects.
+        However, please understand that it is not possible to say that in anticipation for every kind and type of device.
+        Please be careful with this application.</string>
+
+    <string name="notice">WARNING: This app only works for rooted devices!</string>
+    <string name="copyright" translatable="false">© Aenadon 2016</string>
+
+    <string name="mDhcp_title">Method 1: Clearing DHCP lease</string>
+    <string name="mDhcp_expl">Please note: ROOT ACCESS is required.</string>
+    <string name="mWpaconf_title">Method 2: Deleting wpa_supplicant.conf</string>
+    <string name="mWpaconf_expl">WARNING: THIS METHOD WILL DELETE ALL WIFI PASSWORDS!\n\nHow to read the WiFi passwords:
+        \n1. Install a file manager with root access (e.g. Root Browser)
+        \n2. Go to /data/misc/wifi and open the file wpa_supplicant.conf
+        \n3. Write down the passwords on a piece of paper (Do NOT backup the file!!!)
+        \n\nPlease note: ROOT ACCESS is required.</string>
+
+    <string name="working">Working hard, please wait&#8230;</string>
+    <string name="success_title">Success :)</string>
+    <string name="success_message">Success! Your WiFi has been turned on again (reconnecting may take a while). If it still does not work properly, please try another method.</string>
+    <string name="fail_title">Fail :(</string>
+    <string name="fail_message">It seems your phone is not rooted. Did you grant superuser rights? Please note that this application only works with ROOT PERMISSION.</string>
+    <string name="othererror_title">Error :S</string>
+    <string name="othererror_message">Something went wrong! Please try again!</string>
+
+    <!-- TODO: XDA thread
+    mDhcp Expl: Sometimes, the DHCP lease of Android gets corrupted. In this case, you are not able to connect to any WiFi network -
+        it keeps displaying \"Obtaining IP address&#8230;\" If that is the case, the functionality of WiFi can easily be restored by deleting two files
+        contained in /data/misc/dhcp - dhcpcd-wlan0.lease and dhcpcd-wlan0.pid. They will automatically get recreated once you enable WiFi.\n
+        \nBy clicking on OK, these two files are going to be deleted.\n\n
+
+    mWpaconf Expl: The file wpa_supplicant.conf (located in /data/misc/wifi) stores all the WiFi passwords of Android. However, for some reason this file gets
+        corrupted easily. Deleting it will force Android to recreate it and WiFi will work again.\n
+        \nBy clicking on OK, this file is going to be deleted.\n\n
+    -->
+
+</resources>
