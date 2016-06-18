@@ -7,7 +7,6 @@
         Please be careful with this application.</string>
 
     <string name="notice">WARNING: This app only works for rooted devices!</string>
-    <string name="copyright" translatable="false">© Aenadon 2016</string>
 
     <string name="mDhcp_title">Method 1: Clearing DHCP lease</string>
     <string name="mDhcp_expl">Please note: ROOT ACCESS is required.</string>
