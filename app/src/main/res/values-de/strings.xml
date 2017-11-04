@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">WLAN Repair</string>
     <string name="disclaimer">Diese Methoden sind mehrmals getestet worden und haben ohne Nebeneffekte funktioniert. Ich bitte jedoch um Verständnis, dass es nicht möglich ist, dies für alle möglichen Arten von Geräten vorherzusagen.  Bitte vorsichtig sein mit dieser Anwendung.</string>
-    <string name="fail_message">Sieht aus als wäre das Gerät nicht gerootet. Wurden Superuser-Rechte gewährt? Bitte beachten, dass diese App nur mit ROOT-RECHTEN funktioniert.</string>
+    <string name="fail_message">Sieht aus als wäre das Gerät nicht gerootet. Wurden Superuser-Rechte gewährt? Bitte beachten, dass diese App nur mit ROOT-RECHTEN funktioniert. Sollte das Gerät allerdings gerootet sein und dieses Dialogfeld ist trotzdem erschienen, bitte mittels \"Senden\"-Button einen Fehlerbericht senden.</string>
     <string name="fail_title">Kein Root-Zugriff(?)</string>
     <string name="mDhcp_title">Methode 1: DHCP-Lease löschen</string>
     <string name="mDhcp_expl">Bitte beachten: ROOT-ZUGRIFF ist erforderlich.</string>

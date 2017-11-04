@@ -21,7 +21,8 @@
     <string name="success_title">Process successful</string>
     <string name="success_message">Success! Your WiFi has been turned on again (reconnecting may take a while). If it still does not work properly, please try another method.</string>
     <string name="fail_title">No root access(?)</string>
-    <string name="fail_message">It seems your phone is not rooted. Did you grant superuser rights? Please note that this application only works with ROOT PERMISSION.</string>
+    <string name="fail_message">It seems your phone is not rooted. Did you grant superuser rights? Please note that this application
+        only works with ROOT PERMISSION. If your phone is rooted yet this dialog still pops up, please report this issue by pressing the Report button.</string>
     <string name="exception_title">Unexpected Error</string>
     <string name="exception_message">There was an unexpected error! Please help me fix that by sending
         me the crash log. No personal information is collected and you can see the info before it\'s sent!</string>

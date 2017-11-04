@@ -67,8 +67,9 @@ public class RootRepair extends AsyncTask<RepairMethod, String, TaskResult> {
                 default:
                     return new TaskResult(TaskStatus.EXCEPTION);
             }
-            if (result != 0) return new TaskResult(TaskStatus.NO_ROOT);
-
+            if (result != 0) {
+                throw new IOException("No root? Result code is not 0");
+            }
         } catch (InterruptedException e) {
             Log.e(LOG_TAG, "Exception on Root task", e);
             return new TaskResult(TaskStatus.EXCEPTION, e, method);
@@ -91,11 +92,6 @@ public class RootRepair extends AsyncTask<RepairMethod, String, TaskResult> {
                 String message = ctx.getString(R.string.success_message);
 
                 dialogToDisplay = getSimpleDialog(ctx, title, message);
-            } else if (status == TaskStatus.NO_ROOT) {
-                String title = ctx.getString(R.string.fail_title);
-                String message = ctx.getString(R.string.fail_message);
-
-                dialogToDisplay = getSimpleDialog(ctx, title, message);
             } else {
                 dialogToDisplay = getReportExceptionDialog(ctx, result);
             }
@@ -114,9 +110,14 @@ public class RootRepair extends AsyncTask<RepairMethod, String, TaskResult> {
     }
 
     private AlertDialog getReportExceptionDialog(final Context ctx, TaskResult result) {
-        String title = ctx.getString(R.string.exception_title);
-        String message = ctx.getString(R.string.exception_message);
-
+        String title, message;
+        if (result.getTaskStatus() == TaskStatus.NO_ROOT) {
+            title = ctx.getString(R.string.fail_title);
+            message = ctx.getString(R.string.fail_message);
+        } else {
+            title = ctx.getString(R.string.exception_title);
+            message = ctx.getString(R.string.exception_message);
+        }
         StringWriter sw = new StringWriter();
         result.getException().printStackTrace(new PrintWriter(sw));
         String exceptionAsString = sw.toString();
