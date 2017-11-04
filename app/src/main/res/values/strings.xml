@@ -18,22 +18,21 @@
         \n\nPlease note: ROOT ACCESS is required.</string>
 
     <string name="working">Working hard, please wait&#8230;</string>
-    <string name="success_title">Success :)</string>
+    <string name="success_title">Process successful</string>
     <string name="success_message">Success! Your WiFi has been turned on again (reconnecting may take a while). If it still does not work properly, please try another method.</string>
-    <string name="fail_title">Fail :(</string>
+    <string name="fail_title">No root access(?)</string>
     <string name="fail_message">It seems your phone is not rooted. Did you grant superuser rights? Please note that this application only works with ROOT PERMISSION.</string>
-    <string name="othererror_title">Error :S</string>
-    <string name="othererror_message">Something went wrong! Please try again!</string>
+    <string name="exception_title">Unexpected Error</string>
+    <string name="exception_message">There was an unexpected error! Please help me fix that by sending
+        me the crash log. No personal information is collected and you can see the info before it\'s sent!</string>
 
-    <!-- TODO: XDA thread
-    mDhcp Expl: Sometimes, the DHCP lease of Android gets corrupted. In this case, you are not able to connect to any WiFi network -
-        it keeps displaying \"Obtaining IP address&#8230;\" If that is the case, the functionality of WiFi can easily be restored by deleting two files
-        contained in /data/misc/dhcp - dhcpcd-wlan0.lease and dhcpcd-wlan0.pid. They will automatically get recreated once you enable WiFi.\n
-        \nBy clicking on OK, these two files are going to be deleted.\n\n
-
-    mWpaconf Expl: The file wpa_supplicant.conf (located in /data/misc/wifi) stores all the WiFi passwords of Android. However, for some reason this file gets
-        corrupted easily. Deleting it will force Android to recreate it and WiFi will work again.\n
-        \nBy clicking on OK, this file is going to be deleted.\n\n
-    -->
+    <string name="report">Report</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="send_crash_report">Send crash report</string>
+    <string name="crash_email_subject" translatable="false">WiFi-Fix Crashlog</string>
+    <string name="crash_email_body_head">Comments:\n\n\n\n
+        Please don\'t edit or delete anything below this line!
+        ------------------------------------------------------------
+    </string>
 
 </resources>

@@ -3,15 +3,15 @@
     <string name="app_name">WLAN Repair</string>
     <string name="disclaimer">Diese Methoden sind mehrmals getestet worden und haben ohne Nebeneffekte funktioniert. Ich bitte jedoch um Verständnis, dass es nicht möglich ist, dies für alle möglichen Arten von Geräten vorherzusagen.  Bitte vorsichtig sein mit dieser Anwendung.</string>
     <string name="fail_message">Sieht aus als wäre das Gerät nicht gerootet. Wurden Superuser-Rechte gewährt? Bitte beachten, dass diese App nur mit ROOT-RECHTEN funktioniert.</string>
-    <string name="fail_title">Fehlgeschlagen :(</string>
+    <string name="fail_title">Kein Root-Zugriff(?)</string>
     <string name="mDhcp_title">Methode 1: DHCP-Lease löschen</string>
     <string name="mDhcp_expl">Bitte beachten: ROOT-ZUGRIFF ist erforderlich.</string>
     <string name="mWpaconf_title">Methode 2: wpa_supplicant.conf löschen</string>
     <string name="notice">ACHTUNG: Diese App funktioniert nur für gerootete Geräte.</string>
-    <string name="othererror_message">Etwas ging schief! Bitte erneut versuchen!</string>
-    <string name="othererror_title">Fehler :S</string>
+    <string name="exception_message">Ein unerwarteter Fehler ist aufgetreten! Bitte mir den Crashlog zusenden, damit ich das Problem beheben kann. Es werden keine persönlichen Daten übertragen und die Daten sind vor dem Senden ersichtlich.</string>
+    <string name="exception_title">Unerwarteter Fehler</string>
     <string name="success_message">Erfolgreich! WLAN wurde soeben wieder aktiviert (Aufbauen der WLAN-Verbindung dauert eventuell noch etwas). Falls es nicht funktioniert, bitte eine andere Methode probieren.</string>
-    <string name="success_title">Erfolgreich :)</string>
+    <string name="success_title">Vorgang erfolgreich</string>
     <string name="mWpaconf_expl">WARNUNG: DIESE METHODE LÖSCHT ALLE WLAN PASSWÖRTER!\n\nWie man die WLAN-Passwörter ausliest:
         \n1. Einen Dateimanager mit Root-Zugriff installieren (z.B. Root Browser)
         \n2. Zu /data/misc/wifi navigieren und die Datei wpa_supplicant.conf öffnen
@@ -19,4 +19,11 @@
         \n\nBitte beachten: ROOT-ZUGRIFF ist erforderlich.</string>
     <string name="working">Arbeite hart, bitte warten…</string>
     <string name="disclaimerTitle">WICHTIGER HINWEIS</string>
+    <string name="report">Senden</string>
+    <string name="dismiss">Ignorieren</string>
+    <string name="send_crash_report">Bericht senden</string>
+    <string name="crash_email_body_head">Kommentare:\n\n\n\n
+        Bitte nichts unter dieser Linie löschen oder verändern!
+        ------------------------------------------------------------
+    </string>
 </resources>
