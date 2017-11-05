@@ -49,17 +49,16 @@ public class RootRepair extends AsyncTask<RepairMethod, String, TaskResult> {
         wifiManager.setWifiEnabled(false);
         RepairMethod method = params[0];
         try {
-            int result;
             switch (method) {
                 case DHCP:
-                    result = Runtime.getRuntime().exec(new String[]{
+                    Runtime.getRuntime().exec(new String[]{
                             "su", "-c",
                             "rm -f /data/misc/dhcp/dhcpcd-wlan0.lease",
                             "rm -f /data/misc/dhcp/dhcpcd-wlan0.pid"
                     }).waitFor();
                     break;
                 case WPACONF:
-                    result = Runtime.getRuntime().exec(new String[]{
+                    Runtime.getRuntime().exec(new String[]{
                             "su", "-c",
                             "rm -f /data/misc/wifi/wpa_supplicant.conf"
                     }).waitFor();
@@ -67,17 +66,14 @@ public class RootRepair extends AsyncTask<RepairMethod, String, TaskResult> {
                 default:
                     return new TaskResult(TaskStatus.EXCEPTION);
             }
-            if (result != 0) {
-                throw new IOException("No root? Result code is not 0");
-            }
+            return new TaskResult(TaskStatus.SUCCESS);
         } catch (InterruptedException e) {
             Log.e(LOG_TAG, "Exception on Root task", e);
             return new TaskResult(TaskStatus.EXCEPTION, e, method);
         } catch (IOException e) {
             Log.e(LOG_TAG, "No root!", e);
-            return new TaskResult(TaskStatus.NO_ROOT);
+            return new TaskResult(TaskStatus.NO_ROOT, e, method);
         }
-        return new TaskResult(TaskStatus.SUCCESS);
     }
 
     @Override
